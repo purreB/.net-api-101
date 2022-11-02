@@ -1,19 +1,19 @@
 namespace Api.Models
 {
-	public class ChampionInfoModel
-	{
+    public class ChampionInfoModel
+    {
 
-		public ChampionInfoModel(int attack, int magic, int defense, int difficulty)
-		{
-			Attack = attack;
-			Magic = magic;
-			Defense = defense;
-			Difficulty = difficulty;
-		}
+        public ChampionInfoModel(ChampionInfoModel info)
+        {
+            attack = info.attack;
+            magic = info.magic;
+            defense = info.defense;
+            difficulty = info.difficulty;
+        }
 
-		public int Attack { get => Attack; set => Attack = value; }
-		public int Magic { get => Magic; set => Magic = value; }
-		public int Defense { get => Defense; set => Defense = value; }
-		public int Difficulty { get => Difficulty; set => Difficulty = value; }
-	}
+        public int attack { get; set; }
+        public int defense { get; set; }
+        public int magic { get; set; }
+        public int difficulty { get; set; }
+    }
 }
